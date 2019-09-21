@@ -17,10 +17,28 @@ import my_lca.treeNode as Node
 
 
 class lca:
-
+    # Do DFS on bst
+    # O(n)
     def ensure_bst(self, root):
-        pass
+        if not root:
+            return True
 
+        stack = [(root, float('-inf'), float('inf'))]
+
+        while stack:
+            root, mini, maxi = stack.pop()
+            if not root:
+                continue
+            val = root.val
+            if val <= mini or val >= maxi:
+                return False
+
+            stack.append((root.right, val, maxi))
+            stack.append((root.left, mini, val))
+
+        return True
+
+    # O(n)
     def path_find(self, root, x, path):
         if root is None:
             return False
