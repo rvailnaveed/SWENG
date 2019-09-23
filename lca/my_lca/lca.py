@@ -13,7 +13,7 @@ Solution:
     -> The lca will be the node before the first mismatch between paths
 
 '''
-import my_lca.treeNode as Node
+from treeNode import TreeNode as Node
 
 
 class lca:
@@ -48,7 +48,7 @@ class lca:
         if root.val == x:
             return True
 
-        if((root.left != None and self.path_find(self, root.left, x, path))) or ((root.right != None and self.path_find(self, root.right, x, path))):
+        if((root.left != None and self.path_find(root.left, x, path))) or ((root.right != None and self.path_find(root.right, x, path))):
             return True
 
         # x was not found in the bst
@@ -56,5 +56,21 @@ class lca:
         return False
 
 
-    def lowest_common_ancestor(self, v, w):
-        pass
+    def lowest_common_ancestor(self, root, v, w):
+        path1 = [] # path from root to v
+        path2 = [] # path from root to w
+        self.path_find(root, v, path1)
+        self.path_find(root, w, path2)
+        temp = [i for i, j in zip(path1, path2) if i != j]
+        print(temp)
+
+if __name__ == "__main__":
+    root = Node(18)
+    root.left = Node(40)
+    root.right = Node(30)
+    root.right.left = Node(100)
+    root.right.right = Node(40)
+    lca = lca()
+
+    lca.lowest_common_ancestor(root, 100, 40)
+
