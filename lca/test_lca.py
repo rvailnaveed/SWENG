@@ -106,7 +106,7 @@ class TestLca(unittest.TestCase):
         v = 14
         w = 86
 
-        self.assertEquals(lca_test.lowest_common_ancestor(root, v, w), -1)
+        self.assertEqual(lca_test.lowest_common_ancestor(root, v, w), -1)
 
     def test_lca(self):
         lca_test = lca()
@@ -124,12 +124,12 @@ class TestLca(unittest.TestCase):
         v = 14
         w = 13
 
-        self.assertEquals(lca_test.lowest_common_ancestor(root, v, w), 14)
+        self.assertEqual(lca_test.lowest_common_ancestor(root, v, w), 14)
 
         v = 6
         w = 14
 
-        self.assertEquals(lca_test.lowest_common_ancestor(root, v, w), 8)
+        self.assertEqual(lca_test.lowest_common_ancestor(root, v, w), 8)
 
 
 

@@ -9,5 +9,9 @@
 
 # Checking Code Coverage
 +   `coverage run test_lca.py` then...
+![](pics/coverage_run.png)
 +   `coverage report` for coverage report in terminal
-+   `coverage html` and open `index.html` inside newly created 'htmlcov' folder in root directory for pretty report
+![](pics/report.png)
++   `coverage html` and open `index.html` inside newly created `htmlcov` folder in root directory for pretty report
+![](pics/1.png)
+![](pics/2.png)
