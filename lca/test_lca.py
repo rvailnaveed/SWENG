@@ -27,6 +27,21 @@ class TestLca(unittest.TestCase):
 
         self.assertTrue(lca_test.ensure_bst(root))
 
+    def test_bst_invalid_number(self):
+        lca_test = lca()
+
+        root = Node(8) 
+        root.left = Node(3) 
+        root.right = Node(10)  
+        root.left.left = Node(1)
+        root.left.right = Node(float('-inf'))
+        root.left.right.right = Node(7)
+        root.left.right.left = Node(4)
+        root.right.right = Node(14)
+        root.right.right.left = Node(13)
+
+
+        self.assertFalse(lca_test.ensure_bst(root))
 
     def test_path_find_empty_bst(self):
         lca_test = lca()
@@ -113,7 +128,7 @@ class TestLca(unittest.TestCase):
 
         v = 6
         w = 14
-        
+
         self.assertEquals(lca_test.lowest_common_ancestor(root, v, w), 8)
 
 
