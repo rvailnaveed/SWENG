@@ -10,9 +10,23 @@ class TestLca(unittest.TestCase):
         root = Node(8) 
         root.left = Node(3) 
         root.right = Node(10)  
+        root.left.left = Node(1)
+        root.left.right = Node(6)
+        root.left.right.right = Node(7)
+        root.left.right.left = Node(4)
+
+        root.right.right = Node(14)
+        root.right.right.left = Node(13)
+
 
         self.assertTrue(lca_test.ensure_bst(root))
         
+    def test_empty_bst(self):
+        lca_test = lca()
+        root = None
+        
+        self.assertTrue(lca_test.ensure_bst(root))
+
 
 
 if __name__ == '__main__':

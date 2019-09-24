@@ -22,7 +22,7 @@ class lca:
     # Do DFS on bst
     # O(n)
     def ensure_bst(self, root):
-        if not root:
+        if root == None:
             return True
 
         stack = [(root, float('-inf'), float('inf'))]
