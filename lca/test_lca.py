@@ -20,7 +20,7 @@ class TestLca(unittest.TestCase):
 
         self.assertTrue(lca_test.ensure_bst(root))
         
-        
+
     def test_empty_bst(self):
         lca_test = lca()
         root = None
@@ -73,6 +73,27 @@ class TestLca(unittest.TestCase):
         x = 26
 
         self.assertFalse(lca_test.path_find(root, x, path))
+
+
+    def test_lca_no_path(self):
+        lca_test = lca()
+
+        root = Node(8) 
+        root.left = Node(3) 
+        root.right = Node(10)  
+        root.left.left = Node(1)
+        root.left.right = Node(6)
+        root.left.right.right = Node(7)
+        root.left.right.left = Node(4)
+        root.right.right = Node(14)
+        root.right.right.left = Node(13)
+
+        v = 14
+        w = 86
+
+        self.assertEquals(lca_test.lowest_common_ancestor(root, v, w), -1)
+
+
 
 if __name__ == '__main__':
     unittest.main()
