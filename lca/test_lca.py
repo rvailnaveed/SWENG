@@ -74,15 +74,15 @@ class TestLca(unittest.TestCase):
     def test_path_find_no_x(self):
         lca_test = lca()
 
-        root = Node(8) 
-        root.left = Node(3) 
-        root.right = Node(10)  
-        root.left.left = Node(1)
-        root.left.right = Node(6)
-        root.left.right.right = Node(7)
-        root.left.right.left = Node(4)
-        root.right.right = Node(14)
-        root.right.right.left = Node(13)
+        root = Node(4)
+        root.right = Node(2)
+        root.left = Node(6)
+        root.right.right = Node(3)
+        root.right.left = Node(1)
+
+        root.right.right = Node(7)
+        root.right.left = Node(5)
+
 
         path = []
         x = 26
