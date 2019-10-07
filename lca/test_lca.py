@@ -56,7 +56,7 @@ class TestLca(unittest.TestCase):
         lca_test = lca()
 
         root = Node(8) 
-        root.left = Node(3) 
+        root.left = Node(3)  
         root.right = Node(10)  
         root.left.left = Node(1)
         root.left.right = Node(6)
