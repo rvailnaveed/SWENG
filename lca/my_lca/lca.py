@@ -13,8 +13,6 @@ Solution:
     -> The lca will be the node before the first mismatch between paths
 
 '''
-#from treeNode import TreeNode as Node
-import sys
 from my_lca.treeNode import TreeNode
 
 
@@ -62,7 +60,6 @@ class lca:
         path1 = [] # path from root to v
         path2 = [] # path from root to w
         if (not self.path_find(root, v, path1) or not self.path_find(root, w, path2)):
-            print("Error, no path found!")
             return -1
 
         i = 0
@@ -72,7 +69,3 @@ class lca:
             i += 1
 
         return path1[i-1]
-
-
-
-#print('\n'.join(sys.path))
