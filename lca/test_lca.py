@@ -38,7 +38,35 @@ class TestLca(unittest.TestCase):
 
         self.assertEqual(lca_test.lowest_common_ancestor(G, 4, 5), 3)
         
+    def test_empty_dag(self):
+        lca_test = lca()
 
+        G = nx.DiGraph()
+
+    def test_invalid_input(self):
+        lca_test = lca()
+
+        G = nx.DiGraph()
+
+    def test_value_not_present(self):
+        lca_test = lca()
+
+        G = nx.DiGraph()
+
+    def test_no_ancestors(self):
+        lca_test = lca()
+
+        G = nx.DiGraph()
+
+    def test_single_node_dag(self):
+        lca_test = lca()
+
+        G = nx.DiGraph()
+
+    def test_cyclic_dag(self):
+        lca_test = lca()
+
+        G = nx.DiGraph()
 
 if __name__ == '__main__':
     unittest.main()

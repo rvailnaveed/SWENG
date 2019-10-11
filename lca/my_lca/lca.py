@@ -32,7 +32,7 @@ class lca:
 
                 return max(intersection)
 
-        print("No DAG given")
+        print("No DAG given!")
         return -1
 
 if __name__ == "__main__":
