@@ -1,13 +1,20 @@
 # Lowest Common Ancestor of a Binary Tree
 
-+   Implementation contained in [lca.py](https://github.com/rvailnaveed/SWENG/blob/master/lca/my_lca/lca.py)
-+   Tests in [test_lca.py](https://github.com/rvailnaveed/SWENG/blob/master/lca/test_lca.py)
-+   Run tests: `python test_lca.py`
++   This implementation makes use of the `networkx` library.
++   Implementation contained in [lca.py](https://github.com/rvailnaveed/SWENG/blob/lca2/lca/my_lca/lca.py)
++   Tests in [test_lca.py](https://github.com/rvailnaveed/SWENG/blob/lca2/lca/test_lca.py)
 
-# Running the Tests
+## Getting Started
++   Clone or download the repo 
++   Make sure you are in the `lca2` branch for the DAG version
++   cd into the `lca` folder: `cd path/to/the/repo/lca`
++   `pip3 install requirements.txt`
+
+## Running the Tests
 +   `python test_lca.py`
 
-# Checking Code Coverage
+## Checking Code Coverage
++   Assuming you are in the `lca` folder...
 +   `coverage run --omit */site-packages/* test_lca.py` then...
 ![](pics/coverage_run.png)
 +   `coverage report` for coverage report in terminal
