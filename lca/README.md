@@ -4,6 +4,7 @@
 +   Tests in [test_lca.py](https://github.com/rvailnaveed/SWENG/blob/master/lca/test_lca.py)
 
 ## Getting Started
++   Have Python 3.0+ installed
 +   Clone or download the repo
 +   cd into the `lca` folder:  `cd path/to/the/repo/lca` 
 +   `pip3 install -r requirements.txt`
