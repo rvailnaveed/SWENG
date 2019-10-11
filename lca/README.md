@@ -1,4 +1,4 @@
-# Lowest Common Ancestor of a Binary Tree
+# Lowest Common Ancestor of a Directed Acyclic Graph
 
 +   This implementation makes use of the `networkx` library.
 +   Implementation contained in [lca.py](https://github.com/rvailnaveed/SWENG/blob/lca2/lca/my_lca/lca.py)
