@@ -11,14 +11,22 @@ Solution:
     -> The lca will be the max of the intersection of both ancestor lists
 
 '''
-#from treeNode import TreeNode as Node
-from networkx import DiGraph
+
+import networkx as nx
 
 class lca:
     
     def ensure_acyclic(self, dag):
-        pass
+        if nx.is_directed_acyclic_graph(dag):
+            return True
+
+        return False
 
     def lowest_common_ancestor(self, dag, v, w):
-        pass
+        v_ancestors = nx.algorithms.dag.ancestors(dag, v)
+        w_ancestors = nx.algorithms.dag.ancestors(dag, w)
 
+
+
+if __name__ == "__main__":
+    pass
