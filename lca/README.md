@@ -2,12 +2,15 @@
 
 +   Implementation contained in [lca.py](https://github.com/rvailnaveed/SWENG/blob/master/lca/my_lca/lca.py)
 +   Tests in [test_lca.py](https://github.com/rvailnaveed/SWENG/blob/master/lca/test_lca.py)
-+   Run tests: `python test_lca.py`
 
-# Running the Tests
+## Getting Started
++   Clone or download the repo
++   cd into the `lca` folder:  `cd path/to/the/repo/lca` 
+
+## Running the Tests
 +   `python test_lca.py`
 
-# Checking Code Coverage
+## Checking Code Coverage
 +   `coverage run test_lca.py` then...
 ![](pics/coverage_run.png)
 +   `coverage report` for coverage report in terminal
