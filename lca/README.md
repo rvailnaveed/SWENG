@@ -6,6 +6,7 @@
 ## Getting Started
 +   Clone or download the repo
 +   cd into the `lca` folder:  `cd path/to/the/repo/lca` 
++   `pip3 install -r requirements.txt`
 
 ## Running the Tests
 +   `python test_lca.py`
