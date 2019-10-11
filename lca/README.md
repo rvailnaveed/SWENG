@@ -8,7 +8,7 @@
 +   `python test_lca.py`
 
 # Checking Code Coverage
-+   `coverage run test_lca.py` then...
++   `coverage run --omit */site-packages/* test_lca.py` then...
 ![](pics/coverage_run.png)
 +   `coverage report` for coverage report in terminal
 ![](pics/report.png)
