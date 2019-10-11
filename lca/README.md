@@ -5,10 +5,11 @@
 +   Tests in [test_lca.py](https://github.com/rvailnaveed/SWENG/blob/lca2/lca/test_lca.py)
 
 ## Getting Started
++   Have Python 3.0+ installed
 +   Clone or download the repo 
 +   Make sure you are in the `lca2` branch for the DAG version
 +   cd into the `lca` folder: `cd path/to/the/repo/lca`
-+   `pip3 install requirements.txt`
++   `pip3 install -r requirements.txt`
 
 ## Running the Tests
 +   `python test_lca.py`
