@@ -81,5 +81,14 @@ class TestLca(unittest.TestCase):
 
         G = nx.DiGraph()
 
+        map(G.add_node, range(3))
+        G.add_edge(1, 2)
+        G.add_edge(2, 3)
+        G.add_edge(3, 1)
+
+        self.assertEqual(lca_test.lowest_common_ancestor(G, 2, 3), -1)
+
+
+
 if __name__ == '__main__':
     unittest.main()
