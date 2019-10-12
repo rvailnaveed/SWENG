@@ -45,7 +45,6 @@ class TestLca(unittest.TestCase):
 
         self.assertEqual(lca_test.lowest_common_ancestor(G, 4, 5), -1)
 
-
     def test_invalid_input(self):
         lca_test = lca()
 
@@ -58,8 +57,6 @@ class TestLca(unittest.TestCase):
         G.add_edge(2, 5)
 
         self.assertEqual(lca_test.lowest_common_ancestor(G, 2, 'a'), -1)
-
-
 
     def test_value_not_present(self):
         lca_test = lca()
@@ -83,6 +80,12 @@ class TestLca(unittest.TestCase):
         lca_test = lca()
 
         G = nx.DiGraph()
+
+        G.add_node(1)
+
+        self.assertEqual(lca_test.lowest_common_ancestor(G, 7, 10), -1)
+
+
 
     def test_cyclic_dag(self):
         lca_test = lca()

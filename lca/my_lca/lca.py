@@ -23,15 +23,14 @@ class lca:
         return False
 
     def lowest_common_ancestor(self, dag, v, w):
-        if dag:
-            if self.ensure_acyclic(dag):
-                if v != None and w != None and v in list(dag.nodes) and w in list(dag.nodes):
-                    if isinstance(v, int) and isinstance(w, int):
-                        v_ancestors = nx.algorithms.dag.ancestors(dag, v)
-                        w_ancestors = nx.algorithms.dag.ancestors(dag, w)
+        if dag and self.ensure_acyclic(dag):
+            if v != None and w != None and v in list(dag.nodes) and w in list(dag.nodes):
+                if isinstance(v, int) and isinstance(w, int):
+                    v_ancestors = nx.algorithms.dag.ancestors(dag, v)
+                    w_ancestors = nx.algorithms.dag.ancestors(dag, w)
 
-                        intersection = [val for val in v_ancestors if val in w_ancestors]
+                    intersection = [val for val in v_ancestors if val in w_ancestors]
 
-                        return max(intersection)
+                    return max(intersection)
 
         return -1
