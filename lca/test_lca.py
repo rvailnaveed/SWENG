@@ -91,7 +91,7 @@ class TestLca(unittest.TestCase):
         G.add_edge(2, 4)
         G.add_edge(2, 5)
 
-        self.assertEqual(lca_test.lowest_common_ancestor(G, 1, 1), 1)
+        self.assertEqual(lca_test.lowest_common_ancestor(G, 5, 5), 5)
 
     def test_cyclic_dag(self):
         lca_test = lca()
