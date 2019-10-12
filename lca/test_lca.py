@@ -71,11 +71,6 @@ class TestLca(unittest.TestCase):
 
         self.assertEqual(lca_test.lowest_common_ancestor(G, 7, 10), -1)
 
-    def test_no_ancestors(self):
-        lca_test = lca()
-
-        G = nx.DiGraph()
-
     def test_single_node_dag(self):
         lca_test = lca()
 
@@ -85,7 +80,18 @@ class TestLca(unittest.TestCase):
 
         self.assertEqual(lca_test.lowest_common_ancestor(G, 7, 10), -1)
 
+    def test_self_ancestor(self):
+        lca_test = lca()
 
+        G = nx.DiGraph()
+
+        map(G.add_node, range(5))
+        G.add_edge(1, 2)
+        G.add_edge(1, 3)
+        G.add_edge(2, 4)
+        G.add_edge(2, 5)
+
+        self.assertEqual(lca_test.lowest_common_ancestor(G, 1, 1), 1)
 
     def test_cyclic_dag(self):
         lca_test = lca()
@@ -98,7 +104,6 @@ class TestLca(unittest.TestCase):
         G.add_edge(3, 1)
 
         self.assertEqual(lca_test.lowest_common_ancestor(G, 2, 3), -1)
-
 
 
 if __name__ == '__main__':
