@@ -10,9 +10,13 @@
 +   Make sure you are in the `lca2` branch for the DAG version
 +   cd into the `lca` folder: `cd path/to/the/repo/lca`
 +   `pip3 install -r requirements.txt`
++   or...
++   `pip install -r requirements.txt`
 
 ## Running the Tests
 +   `python test_lca.py`
++   or...
++   `python3 test_lca.py`
 
 ## Checking Code Coverage
 +   Assuming you are in the `lca` folder...
